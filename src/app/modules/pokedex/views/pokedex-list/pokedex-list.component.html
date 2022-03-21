@@ -1,0 +1,30 @@
+
+<section class="section">
+  <div class="section-heading-wrapper">
+    <h2 class="section-heading">Pokemon list</h2>
+  </div>
+  <div class="section-content">
+    <form [formGroup]="form" class="py-2" (submit)="searchPokemon()">
+      <div class="form-group">
+        <label for="search-pokemon" class="text-white">Pokemon's name</label>
+        <input type="text" class="form-control" id="search-pokemon" placeholder="Search for pokemon in api" formControlName="pokemonName">
+      </div>
+    </form>
+
+    <mat-paginator
+        class="ml-auto"
+        [length]="pagination.count"
+        [pageIndex]="pagination.pageIndex"
+        [pageSize]="pagination.limit"
+        [pageSizeOptions]="pagination.limitOptions"
+        showFirstLastButtons
+        (page)="onPageChanged($event)"
+    ></mat-paginator>
+
+    <ul class="list-unstyled pokemon-list">
+      <li class="pokemon-item" *ngFor="let pokemon of pokemons">
+        <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
+      </li>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+<section class="section">
+  <div class="section-heading-wrapper">
+    <h2 class="section-heading">Wishlist</h2>
+  </div>
+  <div class="section-content">
+    <form [formGroup]="form" class="py-2" (submit)="searchPokemon()">
+      <div class="form-group">
+        <label for="search-pokemon" class="text-white">Pokemon's name</label>
+        <input type="text" class="form-control" id="search-pokemon" placeholder="Search for pokemon in wishlist" formControlName="pokemonName">
+      </div>
+    </form>
+    <mat-paginator 
+        class="ml-auto"
+        [length]="pagination.count"
+        [pageIndex]="pagination.pageIndex"
+        [pageSize]="pagination.limit"
+        [pageSizeOptions]="pagination.limitOptions"
+        showFirstLastButtons
+        (page)="onPageChanged($event)"
+    >
+    </mat-paginator>
+    <ng-container *ngIf="pokemons; else empty">
+      <ul class="list-unstyled pokemon-list">
+          <li class="pokemon-item" *ngFor="let pokemon of pokemons">
+            <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
+          </li>
+      </ul>
+    </ng-container>
+  </div>
+</section>
+  
+<ng-template #empty>
+  <div class="alert alert-warning" role="alert">
+    What do you truly desire ?
+  </div>
+</ng-template>

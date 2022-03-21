@@ -1,0 +1,40 @@
+html {
+  font-size: 14px;
+}
+
+html,
+body {
+  min-width: 1920px;
+  min-width: 1400px;
+  height: 100%;
+  margin: 0;
+  background-color: $bg;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+.section {
+  margin: 0 auto;
+  background: transparent;
+  width: 100%;
+  display: block;
+}
+
+.section-heading-wrapper {
+  position: relative;
+
+  .section-heading {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    text-transform: uppercase;
+  }
+}
+
+.section-content {
+  width: 68rem;
+  margin: 0 auto;
+}

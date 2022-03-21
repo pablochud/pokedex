@@ -1,0 +1,25 @@
+:host {
+    display: block;
+}
+
+.pokemon-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0;
+
+    &::after {
+      content: "";
+      flex: auto;
+    }
+}
+
+.pokemon-item {
+  width: 14rem;
+  height: auto;
+  margin: 1.5rem;
+}
+
+.mat-paginator {
+  background: transparent;
+}
