@@ -14,7 +14,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(
     routes,
     {
-      scrollPositionRestoration: 'top'
+      scrollPositionRestoration: 'disabled'
     })],
   exports: [RouterModule]
 })

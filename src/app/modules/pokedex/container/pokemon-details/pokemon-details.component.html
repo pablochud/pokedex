@@ -1,30 +1,40 @@
 <h2 mat-dialog-title>{{ dataDialog.pokemon.name | titlecase}}</h2>
 
 <mat-dialog-content>
-  <div class="stats">
-    <div >Hp: {{ stats.hp }}</div>
-    <div >Attack: {{ stats.attack }}</div>
-    <div >Defense: {{ stats.defense }}</div>
-    <div >Special-attack: {{ stats.special_attack }}</div>
-    <div >Special-defense: {{ stats.special_defense }}</div>
-    <div >Speed: {{ stats.speed }}</div>
+  <div class="main-container">
+    <div class="image">
+      <img
+          class="detail-pokemon-img"
+          alt="pokemon-img"
+          src="http://img.pokemondb.net/artwork/{{pokemon.name}}.jpg"
+          onerror="this.src='assets/img/whos_that_pokemon.png';"
+      >
+    </div>
+    <div class="stats">
+      <div >Hp: {{ stats.hp }}</div>
+      <div >Attack: {{ stats.attack }}</div>
+      <div >Defense: {{ stats.defense }}</div>
+      <div >Special-attack: {{ stats.special_attack }}</div>
+      <div >Special-defense: {{ stats.special_defense }}</div>
+      <div >Speed: {{ stats.speed }}</div>
+    </div>
   </div>
-  <details>
-		<summary>
-			<div>
-				<h3>
-					<strong>Moves</strong>
-				</h3>
-        <span>{{ moves.length }}</span>
-			</div>
-		</summary>
-		<div>
-      <!-- <mat-chip-list aria-label="Moves list">
-        <mat-chip *ngFor="let move of moves">{{ move.move.name }}</mat-chip>
-      </mat-chip-list> -->
-      <div class="moves" *ngFor="let move of moves">{{ move.move.name }}</div>
-		</div>
-	</details>
+    <details>
+      <summary>
+        <div>
+          <h3>
+            <strong>Moves</strong>
+          </h3>
+          <span>{{ moves.length }}</span>
+        </div>
+      </summary>
+      <div>
+        <!-- <mat-chip-list aria-label="Moves list">
+          <mat-chip *ngFor="let move of moves">{{ move.move.name }}</mat-chip>
+        </mat-chip-list> -->
+        <div class="moves" *ngFor="let move of moves">{{ move.move.name }}</div>
+      </div>
+    </details>
 </mat-dialog-content>
 <mat-dialog-actions>
   <button type="button" class="btn btn-light" mat-dialog-close>Cancel</button>

@@ -1,18 +1,24 @@
 .card {
-    align-items: center; // beaouse flex dir is column
-    box-shadow: 0 0 0 3px black;
+  align-items: center; // becouse flex dir is column
+  box-shadow: 0 0 0 3px black;
 }
 
 .card-ball-img {
-    position: absolute;
-    height: 42px;
-    width: 42px;
-    left: 0;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  left: 0;
+  transform: translate(-50%, -50%);
 }
 
 .card-pokemon-img {
-    width: auto;
-    height: 5rem;
-    padding-top: 5px;
+  width: auto;
+  height: 5rem;
+  padding-top: 5px;
+}
+
+.btn-details {
+  background-color: #363945;
+  border-color: #363945;
+  color: #fff;
 }

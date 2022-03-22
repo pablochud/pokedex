@@ -4,11 +4,12 @@ html {
 
 html,
 body {
-  min-width: 1920px;
-  min-width: 1400px;
+  // min-width: 1920px;
+  // min-width: 1400px;
   height: 100%;
   margin: 0;
   background-color: $bg;
+  font-family: 'Press Start 2P', cursive;
 }
 
 *,
@@ -22,19 +23,24 @@ body {
   background: transparent;
   width: 100%;
   display: block;
-}
 
-.section-heading-wrapper {
-  position: relative;
-
-  .section-heading {
-    margin-top: .25rem;
-    margin-bottom: .25rem;
-    text-transform: uppercase;
+  & .section-heading-wrapper {
+    position: relative;
+    text-align: center;
+    color: $blue;
+    background-color: $yellow;
+  
+    .section-heading {
+      margin-left: 2rem;
+      margin-top: .25rem;
+      margin-bottom: .25rem;
+      padding-top: 6px;
+      text-transform: uppercase;
+    }
   }
-}
 
-.section-content {
-  width: 68rem;
-  margin: 0 auto;
+  & .section-content {
+    width: 68rem;
+    margin: 0 auto;
+  }
 }
